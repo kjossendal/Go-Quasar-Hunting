@@ -53,7 +53,6 @@ export default {
   }),
   methods: {
     search(event) {
-      console.log("E", event.keyCode);
       if (this.ignoredKeycodes.includes(event.keyCode)) {
         return;
       }

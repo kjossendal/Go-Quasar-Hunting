@@ -41,7 +41,6 @@ export default {
     async getCountryDetails(name) {
       try {
         const co = await Countries.findByName(name);
-        console.log("CO", co);
         if (co.statusCode === 404) {
           this.selectedCountry = new Country();
           return;
