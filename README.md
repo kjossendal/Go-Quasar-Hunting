@@ -1,3 +1,10 @@
-# Quasar App
+# Go Hunt Quasar App 
 
-> WIP
+### To Run
+```
+npm run dev
+```
+### Don't have Quasar cli? Run in Docker
+```
+./devserver.sh
+```

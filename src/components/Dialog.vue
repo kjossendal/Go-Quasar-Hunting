@@ -9,22 +9,28 @@
         </q-card-section>
 
         <q-card-section>
-          <p>Capital:</p>
-          <p>{{ selectedCountry.capital || "unknown" }}</p>
+          <div class="row">
+            <p class="sub-title">Capital:</p>
+            <p>{{ selectedCountry.capital || "unknown" }}</p>
+          </div>
         </q-card-section>
 
         <q-card-section>
-          <p>Currencies:</p>
-          <p v-for="currency in selectedCountry.currency" :key="currency">
-            {{ currency }}
-          </p>
+          <div class="row">
+            <p class="sub-title">Currencies:</p>
+            <p v-for="currency in selectedCountry.currency" :key="currency">
+              {{ currency }}&nbsp;
+            </p>
+          </div>
         </q-card-section>
 
         <q-card-section>
-          <p>Languages:</p>
-          <p v-for="lang in selectedCountry.languages" :key="lang">
-            {{ lang }}
-          </p>
+          <div class="row">
+            <p class="sub-title">Languages:</p>
+            <p v-for="lang in selectedCountry.languages" :key="lang">
+              {{ lang }}&nbsp;
+            </p>
+          </div>
         </q-card-section>
 
         <q-card-actions align="right">
@@ -57,3 +63,8 @@ export default {
   }
 };
 </script>
+<style lang="stylus" scoped>
+.sub-title
+    font-weight: bold
+    padding-right: 5px
+</style>

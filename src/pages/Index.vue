@@ -73,6 +73,7 @@ export default {
     reset() {
       this.searchText = "";
       this.dirty = false;
+      this.locationsList = [];
     }
   }
 };

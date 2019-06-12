@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import Countries from "Countries-Api";
+import Countries from "countries-api";
 
 import Dialog from "@/components/Dialog.vue";
 import Country from "@/types/Country";

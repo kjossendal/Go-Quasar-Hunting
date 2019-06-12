@@ -7,7 +7,7 @@
   "author": "Balintataw J <balintataw2@gmail.com>",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue src",
+    "lint": "eslint --ext .js,.vue src --fix",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
     "build": "quasar build",

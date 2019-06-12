@@ -1,21 +1,17 @@
 // Configuration for your app
-var path = require('path');
+var path = require("path");
 
-module.exports = function (ctx) {
+module.exports = function(ctx) {
   return {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
-    boot: [
-      'axios'
-    ],
+    boot: ["axios"],
 
-    css: [
-      'app.styl'
-    ],
+    css: ["app.styl"],
 
     extras: [
-      'roboto-font',
-      'material-icons' // optional, you are not bound to it
+      "roboto-font",
+      "material-icons" // optional, you are not bound to it
       // 'ionicons-v4',
       // 'mdi-v3',
       // 'fontawesome-v5',
@@ -26,36 +22,32 @@ module.exports = function (ctx) {
       // all: true, // --- includes everything; for dev only!
 
       components: [
-        'QLayout',
-        'QHeader',
-        'QDrawer',
-        'QPageContainer',
-        'QPage',
-        'QToolbar',
-        'QToolbarTitle',
-        'QBtn',
-        'QIcon',
-        'QList',
-        'QItem',
-        'QItemSection',
-        'QItemLabel',
-        'QInput',
-        'QSpinnerDots',
-        'QDialog',
-        'QCard',
-        'QCardActions',
-        'QCardSection',
+        "QLayout",
+        "QHeader",
+        "QDrawer",
+        "QPageContainer",
+        "QPage",
+        "QToolbar",
+        "QToolbarTitle",
+        "QBtn",
+        "QIcon",
+        "QList",
+        "QItem",
+        "QItemSection",
+        "QItemLabel",
+        "QInput",
+        "QSpinnerDots",
+        "QDialog",
+        "QCard",
+        "QCardActions",
+        "QCardSection",
+        "QMenu"
       ],
 
-      directives: [
-        'Ripple',
-        'ClosePopup'
-      ],
+      directives: ["Ripple", "ClosePopup"],
 
       // Quasar plugins
-      plugins: [
-        'Notify'
-      ]
+      plugins: ["Notify"]
 
       // iconSet: 'ionicons-v4'
       // lang: 'de' // Quasar language
@@ -65,22 +57,22 @@ module.exports = function (ctx) {
 
     build: {
       scopeHoisting: true,
-      vueRouterMode: 'history',
+      vueRouterMode: "history",
       // vueCompiler: true,
       // gzip: true,
       // analyze: true,
       // extractCSS: false,
-      extendWebpack (cfg) {
+      extendWebpack(cfg) {
         cfg.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /node_modules/
         });
         cfg.resolve.alias = {
           ...cfg.resolve.alias,
-          '@': path.resolve(__dirname, './src')
-        }
+          "@": path.resolve(__dirname, "./src")
+        };
       }
     },
 
@@ -104,35 +96,35 @@ module.exports = function (ctx) {
         // name: 'Quasar App',
         // short_name: 'Quasar-PWA',
         // description: 'Best PWA App in town!',
-        display: 'standalone',
-        orientation: 'portrait',
-        background_color: '#ffffff',
-        theme_color: '#027be3',
+        display: "standalone",
+        orientation: "portrait",
+        background_color: "#ffffff",
+        theme_color: "#027be3",
         icons: [
           {
-            'src': 'statics/icons/icon-128x128.png',
-            'sizes': '128x128',
-            'type': 'image/png'
+            src: "statics/icons/icon-128x128.png",
+            sizes: "128x128",
+            type: "image/png"
           },
           {
-            'src': 'statics/icons/icon-192x192.png',
-            'sizes': '192x192',
-            'type': 'image/png'
+            src: "statics/icons/icon-192x192.png",
+            sizes: "192x192",
+            type: "image/png"
           },
           {
-            'src': 'statics/icons/icon-256x256.png',
-            'sizes': '256x256',
-            'type': 'image/png'
+            src: "statics/icons/icon-256x256.png",
+            sizes: "256x256",
+            type: "image/png"
           },
           {
-            'src': 'statics/icons/icon-384x384.png',
-            'sizes': '384x384',
-            'type': 'image/png'
+            src: "statics/icons/icon-384x384.png",
+            sizes: "384x384",
+            type: "image/png"
           },
           {
-            'src': 'statics/icons/icon-512x512.png',
-            'sizes': '512x512',
-            'type': 'image/png'
+            src: "statics/icons/icon-512x512.png",
+            sizes: "512x512",
+            type: "image/png"
           }
         ]
       }
@@ -146,29 +138,26 @@ module.exports = function (ctx) {
     electron: {
       // bundler: 'builder', // or 'packager'
 
-      extendWebpack (cfg) {
+      extendWebpack(cfg) {
         // do something with Electron main process Webpack cfg
         // chainWebpack also available besides this extendWebpack
       },
 
       packager: {
         // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options
-
         // OS X / Mac App Store
         // appBundleId: '',
         // appCategoryType: '',
         // osxSign: '',
         // protocol: 'myapp://path',
-
         // Window only
         // win32metadata: { ... }
       },
 
       builder: {
         // https://www.electron.build/configuration/configuration
-
         // appId: 'quasar-app'
       }
     }
-  }
-}
+  };
+};
