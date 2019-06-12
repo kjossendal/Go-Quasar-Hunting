@@ -2195,6 +2195,14 @@ cosmiconfig@^5.0.0:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
+countries-api@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/countries-api/-/countries-api-2.0.2.tgz#01417cb646d626db110348f5ff4216f5a7d17433"
+  integrity sha512-xuNlPp1oRgwq+Zdz3bYy8/+6boWBofcwLBtf68BdhTXUjwy9k+gb9bABKOXd1RNbkobMoJa3kJbyljMqnwOZGg==
+  dependencies:
+    response-format "^1.0.0"
+    underscore "^1.8.3"
+
 create-ecdh@^4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.3.tgz#c9111b6f33045c4697f144787f9254cdc77c45ff"
@@ -6256,6 +6264,11 @@ resolve@^1.2.0, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.8.1:
   dependencies:
     path-parse "^1.0.6"
 
+response-format@^1.0.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/response-format/-/response-format-1.2.0.tgz#2df8c4bb9f2ff5376319aa841db05cfa6dbbc43a"
+  integrity sha512-o0pi4qkruHvkteSwPLIGurxXwFnLvub42eo+V7KyskaocE5mfdZWKBgRsnZPyCuLYq6jWI/FYli1pqISTPKmtg==
+
 restore-cursor@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/restore-cursor/-/restore-cursor-2.0.0.tgz#9f7ee287f82fd326d4fd162923d62129eee0dfaf"
@@ -7101,6 +7114,11 @@ uglify-js@^3.5.1:
   dependencies:
     commander "~2.20.0"
     source-map "~0.6.1"
+
+underscore@^1.8.3:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.9.1.tgz#06dce34a0e68a7babc29b365b8e74b8925203961"
+  integrity sha512-5/4etnCkd9c8gwgowi5/om/mYO5ajCaOgdzj/oW+0eQV9WxKBDZw5+ycmKmeaTXjInS/W0BzpGLo2xR2aBwZdg==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
